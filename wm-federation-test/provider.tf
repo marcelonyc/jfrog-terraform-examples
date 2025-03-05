@@ -2,7 +2,7 @@ terraform {
   required_providers {
     artifactory = {
       source  = "jfrog/artifactory"
-      version = "12.3.3"
+      version = "12.9.1"
     }
   }
   backend "remote" {
@@ -16,25 +16,19 @@ terraform {
 
 
 provider "artifactory" {
-  alias = "primary"
-  access_token = var.JFROG_ACCESS_TOKEN_PRIMARY
-  url = var.JFROG_URL_PRIMARY
+  alias = "ci_instance"
+  access_token = var.JFROG_ACCESS_TOKEN_CI_INSTANCE
+  url = var.JFROG_URL_CI_INSTANCE
 }
 
 provider "artifactory" {
-  alias = "secondary"
-  access_token = var.JFROG_ACCESS_TOKEN_SECONDARY
-  url = var.JFROG_URL_SECONDARY
+  alias = "cd_instance"
+  access_token = var.JFROG_ACCESS_TOKEN_CD_INSTANCE
+  url = var.JFROG_URL_CD_INSTANCE
 }
 
 provider "artifactory" {
   alias = "edge"
   access_token = var.JFROG_ACCESS_TOKEN_EDGE
   url = var.JFROG_URL_EDGE
-}
-
-provider "artifactory" {
-  alias = "soleng"
-  access_token = var.JFROG_ACCESS_TOKEN_SOLENG
-  url = var.JFROG_URL_SOLENG
 }
