@@ -1,5 +1,5 @@
 org,ci,cd,edge,docker,maven,npm,terraform,default_properties,xray_enabled,federated
 org_i,true,true,true,true,true,true,true,true,false,true
 org_ii,true,true,true,false,true,true,true,true,true,true
-org_iii,true,true,false,true,true,true,true,true,true,false
+org_iii,true,false,false,true,true,true,true,true,true,false
 org_iv,true,true,true,true,true,true,true,true,true,true

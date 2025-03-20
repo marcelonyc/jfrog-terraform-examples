@@ -76,5 +76,5 @@ resource "artifactory_federated_docker_v2_repository" "docker-federated" {
       enabled = true
     }
   }
-
+  depends_on = [artifactory_federated_maven_repository.terraform-federated-test-maven-repo]
 }
